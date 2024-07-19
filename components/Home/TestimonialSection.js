@@ -4,11 +4,11 @@ import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import Image from 'next/image';
 
-interface TeamMember {
-  name: string;
-  role: string;
-  image: string;
-}
+// interface TeamMember {
+//   name: string;
+//   role: string;
+//   image: string;
+// }
 
 const TestimonialSection = () => {
   return (
