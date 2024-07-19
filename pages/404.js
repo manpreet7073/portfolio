@@ -5,7 +5,7 @@ export default function Custom404() {
     return (
         <>
         <ContainerBlock>
-        <section className={`${styles.page_404} black-bg`}>
+        <section className={`${styles.page_404}`}>
             <div className="container">
                 <div className="row">
                 <div className="col-sm-12 ">
