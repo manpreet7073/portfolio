@@ -3,40 +3,23 @@ import Head from "next/head";
 import Script from 'next/script';
 import { useRouter } from "next/router";
 import { BiSolidUpvote } from "react-icons/bi";
+import Image from 'next/image';
 
 
 import dynamic from 'next/dynamic'
 const DynamicHeader = dynamic(() => import('./core/Header'), {
-  loading: () => <><svg className="bird" viewBox="0 0 100 100">
-  <path d="M15 20 L30 5 L50 20 L70 5 L85 20 L60 40 L40 60 L20 40 Z" />
-  <g className="triangles">
-    <path d="M20 20 L10 15 L15 10 Z" />
-    <path d="M30 30 L25 20 L35 25 Z" />
-    <path d="M45 35 L40 25 L50 30 Z" />
-    <path d="M60 40 L55 30 L65 35 Z" />
-    <path d="M75 45 L70 35 L80 40 Z" />
-    <path d="M50 50 L45 40 L55 45 Z" />
-    <path d="M30 60 L25 50 L35 55 Z" />
-    <path d="M10 70 L5 60 L15 65 Z" />
-  </g>
-</svg>
-</>,
+  loading: () => <>
+        <div className="loader text-center">
+        <Image src="/loding.png" width={50} height={50} alt="Loader" className="loader-image" />
+        </div>
+    </>
 });
 const DynamicFooter = dynamic(() => import('./core/Footer'), {
-  loading: () => <><svg className="bird" viewBox="0 0 100 100">
-  <path d="M15 20 L30 5 L50 20 L70 5 L85 20 L60 40 L40 60 L20 40 Z" />
-  <g className="triangles">
-    <path d="M20 20 L10 15 L15 10 Z" />
-    <path d="M30 30 L25 20 L35 25 Z" />
-    <path d="M45 35 L40 25 L50 30 Z" />
-    <path d="M60 40 L55 30 L65 35 Z" />
-    <path d="M75 45 L70 35 L80 40 Z" />
-    <path d="M50 50 L45 40 L55 45 Z" />
-    <path d="M30 60 L25 50 L35 55 Z" />
-    <path d="M10 70 L5 60 L15 65 Z" />
-  </g>
-</svg>
-</>,
+  loading: () => <>
+        <div className="loader text-center">
+        <Image src="/loding.png" width={50} height={50} alt="Loader" className="loader-image" />
+        </div>
+    </>
 });
 export default function ContainerBlock({ children, ...customMeta }) {
   const router = useRouter();

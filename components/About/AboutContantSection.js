@@ -34,7 +34,7 @@ const AboutContantSection = () => {
               <p className="mb-2">95%</p>
             </div>
             <div className="progress">
-              <div className="progress-bar1 bg-primary" role="progressbar" />
+              <div className="progress-bar3 bg-primary" role="progressbar" />
             </div>
           </div>
           <a href="" className="btn btn-primary py-sm-3 px-sm-5 rounded-pill mt-3">Read More</a>

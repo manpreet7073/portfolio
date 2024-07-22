@@ -24,7 +24,7 @@ const ServiceSection = ({ PageName }) => {
               </div>
               <h5 className="mb-3">Web Designing and development</h5>
               <p className="m-0">A team of expert web developers and designers with a versatile skill-set enables us to create user-friendly websites that enhance your online presence and customer experience.</p>
-              <a className="btn btn-square" href=""><FaArrowRight size={15} /></a>
+              <Link className="btn btn-square" href="/service"><FaArrowRight size={15} /></Link>
             </div>
           </div>
           <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
@@ -34,7 +34,7 @@ const ServiceSection = ({ PageName }) => {
               </div>
               <h5 className="mb-3">Cloud Computing</h5>
               <p className="m-0">Cloud Computing enables on-demand access to computing resources like servers and storage, delivered over the internet for enhanced scalability and flexibility</p>
-              <a className="btn btn-square" href=""><FaArrowRight size={15} /></a>
+              <Link className="btn btn-square" href="/service"><FaArrowRight size={15} /></Link>
             </div>
           </div>
           <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
@@ -44,12 +44,12 @@ const ServiceSection = ({ PageName }) => {
               </div>
               <h5 className="mb-3">SEO Optimization</h5>
               <p className="m-0">SEO Optimization involves techniques to enhance website visibility in search engine results, improving organic traffic and online presence effectively.</p>
-              <a className="btn btn-square" href=""><FaArrowRight size={15} /></a>
+              <Link className="btn btn-square" href="/service"><FaArrowRight size={15} /></Link>
             </div>
           </div>
           {PageName === "home" &&
           <>
-          <div className='col-lg-4' ></div><div className='col-lg-4 text-center'><Link href="/" className="btn btn-primary py-sm-3 px-sm-5 rounded-pill mt-3">Read More</Link></div><div className='col-lg-4'></div>
+          <div className='col-lg-4' ></div><div className='col-lg-4 text-center'><Link href="/service" className="btn btn-primary py-sm-3 px-sm-5 rounded-pill mt-3">Read More</Link></div><div className='col-lg-4'></div>
           </>
           }          
 
@@ -62,7 +62,7 @@ const ServiceSection = ({ PageName }) => {
                   </div>
                   <h5 className="mb-3">PHP development</h5>
                   <p className="m-0">Geared toward improving business growth and customer experience, our PHP solutions are dynamic and robust, allowing you to develop superior performance parameters.</p>
-                  <a className="btn btn-square" href=""><FaArrowRight size={15} /></a>
+                  <Link className="btn btn-square" href="/service"><FaArrowRight size={15} /></Link>
                 </div>
               </div>
               <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
@@ -72,7 +72,7 @@ const ServiceSection = ({ PageName }) => {
                   </div>
                   <h5 className="mb-3">eCommerce Solutions</h5>
                   <p className="m-0">Bolster your marketing efforts with an impressive eCommerce platform that allows you to run your online store with great efficiency, boosting your online business.</p>
-                  <a className="btn btn-square" href=""><FaArrowRight size={15} /></a>
+                  <Link className="btn btn-square" href="/service"><FaArrowRight size={15} /></Link>
                 </div>
               </div>
               <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
@@ -82,7 +82,7 @@ const ServiceSection = ({ PageName }) => {
                   </div>
                   <h5 className="mb-3">CMS</h5>
                   <p className="m-0">Integrating a custom content management system means improved functionality, effective adaptability, and increased security, working more efficiently than off-the-shelf solutions.</p>
-                  <a className="btn btn-square" href=""><FaArrowRight size={15} /></a>
+                  <Link className="btn btn-square" href="/service"><FaArrowRight size={15} /></Link>
                 </div>
               </div>
               <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
@@ -92,7 +92,7 @@ const ServiceSection = ({ PageName }) => {
                   </div>
                   <h5 className="mb-3">NodeJS Development</h5>
                   <p className="m-0">A programming language written in JavaScript, our NodeJS development services support low APIs, allowing us to build applications that deliver competitive results.</p>
-                  <a className="btn btn-square" href=""><FaArrowRight size={15} /></a>
+                  <Link className="btn btn-square" href="/service"><FaArrowRight size={15} /></Link>
                 </div>
               </div>
               <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
@@ -102,7 +102,7 @@ const ServiceSection = ({ PageName }) => {
                   </div>
                   <h5 className="mb-3">Angular JS</h5>
                   <p className="m-0">Using UX/UI technologies, we create dynamic applications and websites that allow our clients to incorporate an effective interface into their business framework.</p>
-                  <a className="btn btn-square" href=""><FaArrowRight size={15} /></a>
+                  <Link className="btn btn-square" href="/service"><FaArrowRight size={15} /></Link>
                 </div>
               </div>
               <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
@@ -112,7 +112,7 @@ const ServiceSection = ({ PageName }) => {
                   </div>
                   <h5 className="mb-3">React JS</h5>
                   <p className="m-0">Our ReactJS Frameworks allow our clients to add and sustain flexibility and convenience to their websites and mobile applications.</p>
-                  <a className="btn btn-square" href=""><FaArrowRight size={15} /></a>
+                  <Link className="btn btn-square" href="/service"><FaArrowRight size={15} /></Link>
                 </div>
               </div>
 
@@ -123,7 +123,7 @@ const ServiceSection = ({ PageName }) => {
                   </div>
                   <h5 className="mb-3">Next JS</h5>
                   <p className="m-0">Our ReactJS Frameworks allow our clients to add and sustain flexibility and convenience to their websites and mobile applications.</p>
-                  <a className="btn btn-square" href=""><FaArrowRight size={15} /></a>
+                  <Link className="btn btn-square" href="/service"><FaArrowRight size={15} /></Link>
                 </div>
               </div>
 
@@ -134,7 +134,7 @@ const ServiceSection = ({ PageName }) => {
                   </div>
                   <h5 className="mb-3">Vue JS</h5>
                   <p className="m-0">Our ReactJS Frameworks allow our clients to add and sustain flexibility and convenience to their websites and mobile applications.</p>
-                  <a className="btn btn-square" href=""><FaArrowRight size={15} /></a>
+                  <Link className="btn btn-square" href="/service"><FaArrowRight size={15} /></Link>
                 </div>
               </div>
               

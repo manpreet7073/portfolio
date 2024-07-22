@@ -476,9 +476,11 @@ h6,
     width: 85% !important;
 }
 .progress-bar2{
+    width: 90% !important;
+}
+.progress-bar3{
     width: 95% !important;
 }
-
 /*** Fact ***/
 .fact {
     /* margin: 6rem 0; */
@@ -674,29 +676,25 @@ h6,
     color: #FFFFFF;
     background: var(--primary);
 }
-/* loader */
 .loader {
-    width: 100px;
-    height: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.loader img {
-    width: 100%;
-    height: 100%;
-    animation: rotate 2s linear infinite;
-}
-
-@keyframes rotate {
-    from {
-        transform: rotate(0deg);
+    height: 100vh; /* or any other height you want */
+  }
+  
+  .loader-image {
+    animation: spin 2s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
     }
-    to {
-        transform: rotate(360deg);
+    100% {
+      transform: rotate(360deg);
     }
-}
+  }
 
 /*** Footer ***/
 .footer {

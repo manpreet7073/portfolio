@@ -5,21 +5,21 @@ import Image from "next/image";
 const DynamicContainerBlock = dynamic(() => import('@components/ContainerBlock'), {
   loading: () => <>
         <div className="loader text-center">
-            <Image src="/loding.png" width={50} height={50} alt="Loader" />
+        <Image src="/loding.png" width={50} height={50} alt="Loader" className="loader-image" />
         </div>
     </>
 });
 const DynamicportfolioBanner = dynamic(() => import('@components/Portfolio/portfolioBanner'), {
   loading: () => <>
-  <div className="loader text-center">
-      <Image src="/loding.png" width={50} height={50} alt="Loader" />
-  </div>
-</>
+        <div className="loader text-center">
+        <Image src="/loding.png" width={50} height={50} alt="Loader" className="loader-image" />
+        </div>
+    </>
 });
 const DynamicProjectsSection = dynamic(() => import('@components/Home/ProjectsSection'), {
   loading: () => <>
         <div className="loader text-center">
-            <Image src="/loding.png" width={50} height={50} alt="Loader" />
+        <Image src="/loding.png" width={50} height={50} alt="Loader" className="loader-image" />
         </div>
     </>
 });

@@ -3,31 +3,31 @@ import dynamic from 'next/dynamic'
 import Image from "next/image";
 
 const DynamicContainerBlock = dynamic(() => import('@components/ContainerBlock'), {
-    loading: () => <>
-        <div className="loader text-center">
-            <Image src="/loding.png" width={50} height={50} alt="Loader" />
-        </div>
-    </>,
+  loading: () => <>
+  <div className="loader text-center">
+  <Image src="/loding.png" width={50} height={50} alt="Loader" className="loader-image" />
+  </div>
+</>
 });
 const DynamicAboutBannerSection = dynamic(() => import('@components/About/AboutBannerSection'), {
-    loading: () => <>
-        <div className="loader text-center">
-            <Image src="/loding.png" width={50} height={50} alt="Loader" />
-        </div>
-    </>,
+  loading: () => <>
+  <div className="loader text-center">
+  <Image src="/loding.png" width={50} height={50} alt="Loader" className="loader-image" />
+  </div>
+</>
   });
 const DynamicAboutContantSection = dynamic(() => import('@components/About/AboutContantSection'), {
-    loading: () => <>
-        <div className="loader text-center">
-            <Image src="/loding.png" width={50} height={50} alt="Loader" />
-        </div>
-    </>
+  loading: () => <>
+  <div className="loader text-center">
+  <Image src="/loding.png" width={50} height={50} alt="Loader" className="loader-image" />
+  </div>
+</>
   })
 
   const DynamicFactsSection = dynamic(() => import('@components/Home/FactsSection'), {
     loading: () => <>
         <div className="loader text-center">
-            <Image src="/loding.png" width={50} height={50} alt="Loader" />
+        <Image src="/loding.png" width={50} height={50} alt="Loader" className="loader-image" />
         </div>
     </>
   })
