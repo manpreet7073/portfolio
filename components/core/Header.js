@@ -1,6 +1,7 @@
 "use client"
 import Link from 'next/link';
 import React, { useEffect } from 'react';
+import { FaBars } from "react-icons/fa";
 import CustomImage from './CustomImage';
 
 const Header = () => {
@@ -36,6 +37,7 @@ const Header = () => {
         </Link>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
           <span className="fa fa-bars"></span>
+          <FaBars size={30} />
         </button>
         <div className="collapse navbar-collapse" id="navbarCollapse">
           <div className="navbar-nav mx-auto py-0">
