@@ -44,8 +44,13 @@ const DynamicProjects = dynamic(() => import('../Home/ProjectsSection'), {
 </>
 })
 
-import Projects from '../Home/ProjectsSection'
-
+const DynamicTestimonialSection = dynamic(() => import('../Home/TestimonialSection'), {
+    loading: () => <>
+    <div className="loader text-center">
+    <Image src="/loding.png" width={50} height={50} alt="Loader" className="loader-image" />
+    </div>
+</>
+})
 const Index = () => {
   return (
     <>
@@ -55,6 +60,7 @@ const Index = () => {
         <DynamicServiec  PageName={'home'}/>
         <DynamicProjects />
         <DynamicNewsletter />
+        <DynamicTestimonialSection />
     </>
 
   )

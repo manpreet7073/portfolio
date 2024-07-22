@@ -466,6 +466,9 @@ h6,
     margin-top: -15px;
 }
 
+.main-cl{
+    color: #ff8800;
+}
 
 /*** About ***/
 .progress {
@@ -675,6 +678,9 @@ h6,
 .team-item .btn:hover {
     color: #FFFFFF;
     background: var(--primary);
+}
+.w-400{
+    width: 400px;
 }
 .loader {
     display: flex;
