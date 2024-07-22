@@ -680,7 +680,8 @@ h6,
     background: var(--primary);
 }
 .w-400{
-    width: 400px;
+    width: 260px !important;
+    height: 500px;
 }
 .loader {
     display: flex;

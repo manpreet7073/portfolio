@@ -194,7 +194,7 @@ const TestimonialSection = () => {
       responsive={responsive}
       ssr={true} // means to render carousel on server-side.
       infinite={true}
-      autoPlay={true}
+      // autoPlay={true}
       autoPlaySpeed={3000}
       keyBoardControl={false}
       customTransition="all .5"
@@ -207,7 +207,7 @@ const TestimonialSection = () => {
       <div  key={index} className="review-item w-400 col-md-6 wow fadeInUp">
       <Image src={review.image} height={200} width={250} alt={review.name} className="img-fluid" />
       <h5 className='main-cl'>{review.name}</h5>
-      <p>{review.review}</p>
+      <p className='service-item'>{review.review}</p>
       </div>
               ))}
     </Carousel>
