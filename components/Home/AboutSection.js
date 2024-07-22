@@ -17,7 +17,7 @@ const AboutSection = () => {
               <p className="mb-2">95%</p>
             </div>
             <div className="progress">
-              <div className="progress-bar bg-primary1" role="progressbar" aria-valuenow={95} aria-valuemin={0} aria-valuemax={100} />
+              <div className="progress-bar bg-primary1" role="progressbar" />
             </div>
           </div>
           <div className="skill mb-4">

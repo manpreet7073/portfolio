@@ -8,12 +8,12 @@ const ContactBanner = () => {
       <div className="container my-5 py-5 px-lg-5">
         <div className="row g-5 py-5">
           <div className="col-12 text-center">
-            <h1 className="text-white animated slideInDown">Contact</h1>
+            <h1 className="text-white animated slideInDown">Portfolio</h1>
             <hr className="bg-white mx-auto mt-0" style={{width: 90}} />
             <nav aria-label="breadcrumb">
               <ol className="breadcrumb justify-content-center">
                 <li className="breadcrumb-item"><Link className="text-white" href="/">Home</Link></li>
-                <li className="breadcrumb-item text-white active" aria-current="page">Contact</li>
+                <li className="breadcrumb-item text-white active" aria-current="page">Portfolio</li>
               </ol>
             </nav>
           </div>

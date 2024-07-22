@@ -1,6 +1,10 @@
 import React from 'react';
-import { FaSearch, FaLaptopCode, FaArrowRight } from "react-icons/fa";
+import { FaSearch, FaLaptopCode, FaArrowRight, FaPhp,FaVuejs,FaShoppingCart, FaNodeJs, FaAngular} from "react-icons/fa";
 import { GrCloudComputer } from "react-icons/gr";
+import { SiPayloadcms } from "react-icons/si";
+import { RiReactjsLine,RiNextjsFill } from "react-icons/ri";
+import Link from 'next/link';
+
 
 const ServiceSection = ({ PageName }) => {
   return (
@@ -43,13 +47,18 @@ const ServiceSection = ({ PageName }) => {
               <a className="btn btn-square" href=""><FaArrowRight size={15} /></a>
             </div>
           </div>
+          {PageName === "home" &&
+          <>
+          <div className='col-lg-4' ></div><div className='col-lg-4 text-center'><Link href="/" className="btn btn-primary py-sm-3 px-sm-5 rounded-pill mt-3">Read More</Link></div><div className='col-lg-4'></div>
+          </>
+          }          
 
           {PageName !== "home" && (
             <>
               <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                 <div className="service-item d-flex flex-column text-center rounded">
                   <div className="service-icon flex-shrink-0">
-                    <i className="fab fa-facebook-f fa-2x" />
+                  <FaPhp  size={50} />
                   </div>
                   <h5 className="mb-3">PHP development</h5>
                   <p className="m-0">Geared toward improving business growth and customer experience, our PHP solutions are dynamic and robust, allowing you to develop superior performance parameters.</p>
@@ -59,7 +68,7 @@ const ServiceSection = ({ PageName }) => {
               <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                 <div className="service-item d-flex flex-column text-center rounded">
                   <div className="service-icon flex-shrink-0">
-                    <i className="fa fa-mail-bulk fa-2x" />
+                    <FaShoppingCart size={50} />
                   </div>
                   <h5 className="mb-3">eCommerce Solutions</h5>
                   <p className="m-0">Bolster your marketing efforts with an impressive eCommerce platform that allows you to run your online store with great efficiency, boosting your online business.</p>
@@ -69,7 +78,7 @@ const ServiceSection = ({ PageName }) => {
               <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                 <div className="service-item d-flex flex-column text-center rounded">
                   <div className="service-icon flex-shrink-0">
-                    <i className="fa fa-thumbs-up fa-2x" />
+                    <SiPayloadcms size={50} />
                   </div>
                   <h5 className="mb-3">CMS</h5>
                   <p className="m-0">Integrating a custom content management system means improved functionality, effective adaptability, and increased security, working more efficiently than off-the-shelf solutions.</p>
@@ -79,7 +88,7 @@ const ServiceSection = ({ PageName }) => {
               <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                 <div className="service-item d-flex flex-column text-center rounded">
                   <div className="service-icon flex-shrink-0">
-                    <i className="fab fa-android fa-2x" />
+                    <FaNodeJs size={50} />
                   </div>
                   <h5 className="mb-3">NodeJS Development</h5>
                   <p className="m-0">A programming language written in JavaScript, our NodeJS development services support low APIs, allowing us to build applications that deliver competitive results.</p>
@@ -89,7 +98,7 @@ const ServiceSection = ({ PageName }) => {
               <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                 <div className="service-item d-flex flex-column text-center rounded">
                   <div className="service-icon flex-shrink-0">
-                    <i className="fab fa-android fa-2x" />
+                    <FaAngular size={50} />
                   </div>
                   <h5 className="mb-3">Angular JS</h5>
                   <p className="m-0">Using UX/UI technologies, we create dynamic applications and websites that allow our clients to incorporate an effective interface into their business framework.</p>
@@ -99,13 +108,36 @@ const ServiceSection = ({ PageName }) => {
               <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                 <div className="service-item d-flex flex-column text-center rounded">
                   <div className="service-icon flex-shrink-0">
-                    <i className="fab fa-android fa-2x" />
+                    <RiReactjsLine size={50} />
                   </div>
                   <h5 className="mb-3">React JS</h5>
                   <p className="m-0">Our ReactJS Frameworks allow our clients to add and sustain flexibility and convenience to their websites and mobile applications.</p>
                   <a className="btn btn-square" href=""><FaArrowRight size={15} /></a>
                 </div>
               </div>
+
+              <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div className="service-item d-flex flex-column text-center rounded">
+                  <div className="service-icon flex-shrink-0">
+                    <RiNextjsFill size={50} />
+                  </div>
+                  <h5 className="mb-3">Next JS</h5>
+                  <p className="m-0">Our ReactJS Frameworks allow our clients to add and sustain flexibility and convenience to their websites and mobile applications.</p>
+                  <a className="btn btn-square" href=""><FaArrowRight size={15} /></a>
+                </div>
+              </div>
+
+              <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div className="service-item d-flex flex-column text-center rounded">
+                  <div className="service-icon flex-shrink-0">
+                    <FaVuejs size={50} />
+                  </div>
+                  <h5 className="mb-3">Vue JS</h5>
+                  <p className="m-0">Our ReactJS Frameworks allow our clients to add and sustain flexibility and convenience to their websites and mobile applications.</p>
+                  <a className="btn btn-square" href=""><FaArrowRight size={15} /></a>
+                </div>
+              </div>
+              
             </>
           )}
 

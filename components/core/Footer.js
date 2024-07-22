@@ -1,5 +1,8 @@
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link';
+import { FaTwitter,FaFacebookF,FaInstagram,FaLinkedinIn } from "react-icons/fa";
+
 const Footer = () => {
   return (
     <>
@@ -12,19 +15,19 @@ const Footer = () => {
           <p><i className="fa fa-phone-alt me-3" />+012 345 67890</p>
           <p><i className="fa fa-envelope me-3" />info@example.com</p>
           <div className="d-flex pt-2">
-            <a className="btn btn-outline-light btn-social"  href=""><i className="fab fa-twitter" /></a>
-            <a className="btn btn-outline-light btn-social"  href=""><i className="fab fa-facebook-f" /></a>
-            <a className="btn btn-outline-light btn-social"  href=""><i className="fab fa-instagram" /></a>
-            <a className="btn btn-outline-light btn-social"  href=""><i className="fab fa-linkedin-in" /></a>
+            <a className="btn btn-outline-light btn-social"  href=""><FaTwitter size={20} /></a>
+            <a className="btn btn-outline-light btn-social"  href=""><FaFacebookF size={20} /></a>
+            <a className="btn btn-outline-light btn-social"  href=""><FaInstagram size={20} /></a>
+            <a className="btn btn-outline-light btn-social"  href=""><FaLinkedinIn size={20} /></a>
           </div>
         </div>
         <div className="col-md-6 col-lg-3">
           <p className="section-title text-white h5 mb-4">Quick Link<span /></p>
-          <a className="btn btn-link"  href="">About Us</a>
-          <a className="btn btn-link"  href="">Contact Us</a>
-          <a className="btn btn-link"  href="">Privacy Policy</a>
-          <a className="btn btn-link"  href="">Terms &amp; Condition</a>
-          <a className="btn btn-link"  href="">Career</a>
+          <Link className="btn btn-link"  href="">About Us</Link>
+          <Link className="btn btn-link"  href="">Contact Us</Link>
+          <Link className="btn btn-link"  href="">Privacy Policy</Link>
+          <Link className="btn btn-link"  href="">Terms &amp; Condition</Link>
+          <Link className="btn btn-link"  href="">Career</Link>
         </div>
         <div className="col-md-6 col-lg-3">
           <p className="section-title text-white h5 mb-4">Gallery<span /></p>

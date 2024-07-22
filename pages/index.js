@@ -1,15 +1,26 @@
-import ContainerBlock from "../components/ContainerBlock";
-import Index from "../components/HomePage/Index"
-import About from "@components/About/AboutBannerSection";
-import Services from "@components/service/ServiceBanner";
-import Portfolio from "@components/testimonial/TestimonialBanner";
-// import Skills from "@components/Skilles";
+import dynamic from 'next/dynamic'
+import Image from 'next/image';
+const DynamicContainerBlock = dynamic(() => import('@components/ContainerBlock'), {
+  loading: () => <>
+        <div className="loader text-center">
+            <Image src="/loding.png" width={50} height={50} alt="Loader" />
+        </div>
+    </>
+});
+
+const DynamicIndex = dynamic(() => import('@components/HomePage/Index'), {
+  loading: () => <>
+        <div className="loader text-center">
+            <Image src="/loding.png" width={50} height={50} alt="Loader" />
+        </div>
+    </>
+});
 
 export default function Home({  }) {
   return (
-    <ContainerBlock>
-         <Index />
+    <DynamicContainerBlock>
+         <DynamicIndex />
          {/* <Skills /> */}
-    </ContainerBlock>
+    </DynamicContainerBlock>
   );
 }

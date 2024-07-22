@@ -42,16 +42,16 @@ const Header = () => {
             <Link href="/" className="nav-item nav-link active">
               Home
             </Link>
-            <Link href="/about" className="nav-item nav-link">
+            <Link href="/about"  className="nav-item nav-link">
               About
             </Link>
-             <Link href="/service" className="nav-item nav-link">
+             <Link href="/service"  className="nav-item nav-link">
               Service
             </Link>
-             <Link href="/project" className="nav-item nav-link">
-              Project
+             <Link href="/portfolio"  className="nav-item nav-link">
+             Portfolio
             </Link>
-            <div className="nav-item dropdown">
+            {/* <div className="nav-item dropdown">
                <Link href="/" className="nav-link dropdown-toggle" data-bs-toggle="dropdown">
                 Pages
               </Link>
@@ -63,12 +63,15 @@ const Header = () => {
                   Testimonial
                 </Link>
               </div>
-            </div>
+            </div> */}
             <Link href="/contact" className="nav-item nav-link">
               Contact
             </Link>
+            <Link href="/career" className="nav-item nav-link">
+            Career
+            </Link>
           </div>
-          <Link href="/" className="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">
+          <Link href="/contact" className="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">
             Get Started
           </Link>
         </div>

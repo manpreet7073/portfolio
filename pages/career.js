@@ -9,26 +9,26 @@ const DynamicContainerBlock = dynamic(() => import('@components/ContainerBlock')
         </div>
     </>
 });
-const DynamicContactBanner = dynamic(() => import('@components/contact/ContactBanner'), {
+const DynamicCareerBanner = dynamic(() => import('@components/Career/CareerBanner'), {
+  loading: () => <>
+  <div className="loader text-center">
+      <Image src="/loding.png" width={50} height={50} alt="Loader" />
+  </div>
+</>
+});
+const DynamicCareerContant = dynamic(() => import('@components/Career/CareerContant'), {
   loading: () => <>
         <div className="loader text-center">
             <Image src="/loding.png" width={50} height={50} alt="Loader" />
         </div>
     </>
 });
-const DynamicContactContant = dynamic(() => import('@components/contact/ContactContant'), {
-  loading: () => <>
-        <div className="loader text-center">
-            <Image src="/loding.png" width={50} height={50} alt="Loader" />
-        </div>
-    </>
-});
-export default function Contact() {
+export default function Career() {
   return (
     <>
       <DynamicContainerBlock>
-        <DynamicContactBanner />
-        <DynamicContactContant />
+      <DynamicCareerBanner />
+      <DynamicCareerContant />
       </DynamicContainerBlock>
     </>
   );

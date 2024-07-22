@@ -1,8 +1,9 @@
 import React from 'react'
+import Link from 'next/link'
 
 const AboutBannerSection = () => {
   return (
-    <div className="container-xxl py-5 bg-primary hero-header">
+    <div className="py-5 bg-primary1 hero-header">
   <div className="container my-5 py-5 px-lg-5">
     <div className="row g-5 py-5">
       <div className="col-12 text-center">
@@ -10,8 +11,7 @@ const AboutBannerSection = () => {
         <hr className="bg-white mx-auto mt-0" style={{width: 90}} />
         <nav aria-label="breadcrumb">
           <ol className="breadcrumb justify-content-center">
-            <li className="breadcrumb-item"><a className="text-white" href="#">Home</a></li>
-            <li className="breadcrumb-item"><a className="text-white" href="#">Pages</a></li>
+            <li className="breadcrumb-item"><Link className="text-white" href="/">Home</Link></li>
             <li className="breadcrumb-item text-white active" aria-current="page">About</li>
           </ol>
         </nav>

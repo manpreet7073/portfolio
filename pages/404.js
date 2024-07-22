@@ -1,10 +1,18 @@
 import styles from '../styles/error.module.css';
-import ContainerBlock from '@components/ContainerBlock';
 import Link from 'next/link';
+import dynamic from 'next/dynamic'
+import Image from 'next/image';
+const DynamicContainerBlock = dynamic(() => import('@components/ContainerBlock'), {
+    loading: () => <>
+        <div className="loader text-center">
+            <Image src="/loding.png" width={50} height={50} alt="Loader" />
+        </div>
+    </>
+});
 export default function Custom404() {
     return (
         <>
-        <ContainerBlock>
+        <DynamicContainerBlock>
         <section className={`${styles.page_404}`}>
             <div className="container">
                 <div className="row">
@@ -25,7 +33,7 @@ export default function Custom404() {
                 </div>
             </div>
         </section>
-        </ContainerBlock>
+        </DynamicContainerBlock>
         <style jsx>{`
         .black-bg {
           background-color: black;
