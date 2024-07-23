@@ -73,9 +73,7 @@ const Header = () => {
     <div className="progress-container-new">
       <div className="progress-bar-new" id="myProgressBar"></div>
     </div>
-  </div>
-);
-    
+  </div>    
     </>
   )
 };

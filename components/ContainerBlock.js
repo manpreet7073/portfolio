@@ -53,11 +53,31 @@ export default function ContainerBlock({ children, ...customMeta }) {
   return (
     <div>
       <Head>
+            <script
+                dangerouslySetInnerHTML={{
+                  __html: `
+                    (function(w,d,s,l,i){
+                      w[l]=w[l]||[];w[l].push({'gtm.start':
+                      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                      'https://www.googletagmanager.com/gtm.js?id=GTM-WWMQHW27'+dl;f.parentNode.insertBefore(j,f);
+                    })(window,document,'script','dataLayer','GTM-WWMQHW27');
+                  `
+                }}
+        />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>{meta.title}</title>
       </Head>
       <main className="">
+      <noscript>
+        <iframe
+          src={`https://www.googletagmanager.com/ns.html?id=${'GTM-WWMQHW27'}`}
+          height="0"
+          width="0"
+          style={{ display: 'none', visibility: 'hidden' }}
+        />
+      </noscript>
         <DynamicHeader />
         <div>{children}</div>
         <DynamicFooter />
@@ -66,6 +86,7 @@ export default function ContainerBlock({ children, ...customMeta }) {
     </div>
       </main>
       <Script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" />
+      {/* G-MQ0WE9MG3F */}
     </div>
   );
 }
