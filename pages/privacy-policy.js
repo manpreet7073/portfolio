@@ -9,18 +9,18 @@ const DynamicContainerBlock = dynamic(() => import('@components/ContainerBlock')
         </div>
     </>
 });
-const DynamicCareerContant = dynamic(() => import('@components/Career/CareerContant'), {
+const DynamicPrivacyPolicySection = dynamic(() => import('@components/privacy-policy/PrivacyPolicy'), {
   loading: () => <>
         <div className="loader text-center">
         <Image src="/loding.png" width={50} height={50} alt="Loader" className="loader-image" />
         </div>
     </>
 });
-export default function Career() {
+export default function Privacy() {
   return (
     <>
       <DynamicContainerBlock>
-      <DynamicCareerContant />
+        <DynamicPrivacyPolicySection />
       </DynamicContainerBlock>
     </>
   );

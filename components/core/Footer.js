@@ -13,7 +13,7 @@ const Footer = () => {
           <p className="section-title text-white h5 mb-4">Address<span /></p>
           <p><i className="fa fa-map-marker-alt me-3" />123 Street, New York, USA</p>
           <p><i className="fa fa-phone-alt me-3" />+012 345 67890</p>
-          <p><i className="fa fa-envelope me-3" />info@example.com</p>
+          <p><i className="fa fa-envelope me-3" />info@rayonweb.com</p>
           <div className="d-flex pt-2">
             <a className="btn btn-outline-light btn-social"  href=""><FaTwitter size={20} /></a>
             <a className="btn btn-outline-light btn-social"  href=""><FaFacebookF size={20} /></a>
@@ -23,11 +23,11 @@ const Footer = () => {
         </div>
         <div className="col-md-6 col-lg-3">
           <p className="section-title text-white h5 mb-4">Quick Link<span /></p>
-          <Link className="btn btn-link"  href="">About Us</Link>
-          <Link className="btn btn-link"  href="">Contact Us</Link>
-          <Link className="btn btn-link"  href="">Privacy Policy</Link>
-          <Link className="btn btn-link"  href="">Terms &amp; Condition</Link>
-          <Link className="btn btn-link"  href="">Career</Link>
+          <Link className="btn btn-link"  href="/about">About Us</Link>
+          <Link className="btn btn-link"  href="/contact">Contact Us</Link>
+          <Link className="btn btn-link"  href="/privacy-policy">Privacy Policy</Link>
+          <Link className="btn btn-link"  href="/f&q">F&Q</Link>
+          <Link className="btn btn-link"  href="/career">Career</Link>
         </div>
         <div className="col-md-6 col-lg-3">
           <p className="section-title text-white h5 mb-4">Gallery<span /></p>
@@ -52,23 +52,15 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="col-md-6 col-lg-3">
-          <p className="section-title text-white h5 mb-4">Newsletter<span /></p>
-          <p>Never miss an update! Join our newsletter to receive the latest news, updates, and insights directly to your inbox.</p>
-          <div className="position-relative w-100 mt-3">
-            <input className="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="text" placeholder="Your Email" style={{height: 48}} />
-            <button type="button" className="btn shadow-none position-absolute top-0 end-0 mt-1 me-2"><i className="fa fa-paper-plane text-primary fs-4" /></button>
-          </div>
-        </div>
       </div>
     </div>
     <div className="container px-lg-5">
       <div className="copyright">
         <div className="row">
           <div className="col-md-6 text-center text-md-start mb-3 mb-md-0">
-            © <a className="border-bottom" href="#">rayonweb</a>, All Right Reserved. 
+            © <a className="border-bottom" href="#">Rayonweb solutions</a>, All Right Reserved. 
             {/*/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. *** /*/}
-            Designed By <a className="border-bottom" href="https://rayonweb.com">rayonweb</a>
+            Designed By <a className="border-bottom" href="https://rayonweb.com">Rayonweb solutions</a>
           </div>
           {/* <div className="col-md-6 text-center text-md-end">
             <div className="footer-menu">

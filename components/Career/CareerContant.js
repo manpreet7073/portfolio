@@ -3,10 +3,10 @@ import React from 'react';
 function CareerSection() {
   return (
     <section className="py-5">
-      <div className="container">
+      <div className="container my-5 py-5 px-lg-5">
         <div className="row">
           <div className="col-lg-12 text-center">
-            <h2>Career Opportunities</h2>
+            <p className="section-title text-secondary">Career Opportunities<span /></p>
             <p className='mb-5'>Join our team and take your career to the next level!</p>
           </div>
         </div>

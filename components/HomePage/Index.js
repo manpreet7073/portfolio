@@ -56,10 +56,9 @@ const Index = () => {
     <>
         <DynamicBanner />
         <DynamicSkills />
-        <DynamicAbout />
+        <DynamicAbout PageName={'home'} />
         <DynamicServiec  PageName={'home'}/>
         <DynamicProjects />
-        <DynamicNewsletter />
         <DynamicTestimonialSection />
     </>
 
