@@ -4,23 +4,24 @@ import Script from 'next/script';
 import { useRouter } from "next/router";
 import { BiSolidUpvote } from "react-icons/bi";
 import Image from 'next/image';
+import dynamic from 'next/dynamic';
 
-
-import dynamic from 'next/dynamic'
 const DynamicHeader = dynamic(() => import('./core/Header'), {
-  loading: () => <>
-        <div className="loader text-center">
-        <Image src="/loding.png" width={50} height={50} alt="Loader" className="loader-image" />
-        </div>
-    </>
+  loading: () => (
+    <div className="loader text-center">
+      <Image src="/loding.png" width={50} height={50} alt="Loader" className="loader-image" />
+    </div>
+  ),
 });
+
 const DynamicFooter = dynamic(() => import('./core/Footer'), {
-  loading: () => <>
-        <div className="loader text-center">
-        <Image src="/loding.png" width={50} height={50} alt="Loader" className="loader-image" />
-        </div>
-    </>
+  loading: () => (
+    <div className="loader text-center">
+      <Image src="/loding.png" width={50} height={50} alt="Loader" className="loader-image" />
+    </div>
+  ),
 });
+
 export default function ContainerBlock({ children, ...customMeta }) {
   const router = useRouter();
   const [showBtn, setShowBtn] = useState(false);
@@ -50,43 +51,41 @@ export default function ContainerBlock({ children, ...customMeta }) {
     type: "website",
     ...customMeta,
   };
+
   return (
     <div>
       <Head>
-            <script
-                dangerouslySetInnerHTML={{
-                  __html: `
-                    (function(w,d,s,l,i){
-                      w[l]=w[l]||[];w[l].push({'gtm.start':
-                      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-                      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-                      'https://www.googletagmanager.com/gtm.js?id=GTM-WWMQHW27'+dl;f.parentNode.insertBefore(j,f);
-                    })(window,document,'script','dataLayer','GTM-WWMQHW27');
-                  `
-                }}
-        />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>{meta.title}</title>
       </Head>
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          (function(w,d,s,l,i){
+            w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+          })(window,document,'script','dataLayer','GTM-WWMQHW27');
+        `}
+      </Script>
       <main className="">
-      <noscript>
-        <iframe
-          src={`https://www.googletagmanager.com/ns.html?id=${'GTM-WWMQHW27'}`}
-          height="0"
-          width="0"
-          style={{ display: 'none', visibility: 'hidden' }}
-        />
-      </noscript>
+        <noscript>
+          <iframe
+            src={`https://www.googletagmanager.com/ns.html?id=GTM-WWMQHW27`}
+            height="0"
+            width="0"
+            style={{ display: 'none', visibility: 'hidden' }}
+          />
+        </noscript>
         <DynamicHeader />
         <div>{children}</div>
         <DynamicFooter />
         <div className="back-to-top-btn" style={{ display: showBtn ? 'block' : 'none' }}>
-        <BiSolidUpvote className='active' size={50} onClick={handleClick}/>
-    </div>
+          <BiSolidUpvote className='active' size={50} onClick={handleClick} />
+        </div>
       </main>
-      <Script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" />
-      {/* G-MQ0WE9MG3F */}
+      <Script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" strategy="lazyOnload" />
     </div>
   );
 }
