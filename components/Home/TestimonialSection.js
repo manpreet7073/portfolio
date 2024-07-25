@@ -23,9 +23,9 @@ const Testimonials = () => {
       <div>
         <Image width={200} height={200} src="/testimonial-3.jpg" alt="Shirley Fultz" />
         <div className="myCarousel">
-          <h3 className="mt-3">Shirley Fultz</h3>
+          <h3 className="mt-3 text-white1">Shirley Fultz</h3>
           <h4 className="main-cl">CEO</h4>
-          <p className="text-white">
+          <p className="text-white1">
             Its freeing to be able to catch up on customized news and not be
             distracted by a social media element on the same site
           </p>
@@ -35,9 +35,9 @@ const Testimonials = () => {
       <div>
         <Image width={200} height={200} src="/testimonial-2.jpg" alt="Daniel Keystone" />
         <div className="myCarousel">
-          <h3 className="mt-3">Daniel Keystone</h3>
+          <h3 className="mt-3 text-white1">Daniel Keystone</h3>
           <h4 className="main-cl">CEO</h4>
-          <p className="text-white">
+          <p className="text-white1">
             The simple and intuitive design makes it easy for me to use. I highly
             recommend Fetch to my peers.
           </p>
@@ -47,9 +47,9 @@ const Testimonials = () => {
       <div>
         <Image width={200} height={200} src="/testimonial-1.jpg" alt="Theo Sorel" />
         <div className="myCarousel">
-          <h3 className="mt-3">Theo Sorel</h3>
+          <h3 className="mt-3 text-white1">Theo Sorel</h3>
           <h4 className="main-cl">CEO</h4>
-          <p className="text-white">
+          <p className="text-white1">
             I enjoy catching up with Fetch on my laptop, or on my phone when
             I m on the go!
           </p>

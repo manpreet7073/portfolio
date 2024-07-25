@@ -237,12 +237,140 @@ h6,
 /*** Navbar ***/
 .navbar .dropdown-toggle::after {
     border: none;
-    content: "\f067";
+    /* content: "\f067"; */
     /* font-family: "Font Awesome 5 Free"; */
     font-size: 10px;
     font-weight: bold;
     vertical-align: middle;
     margin-left: 8px;
+}
+
+.nav-item .services-dropdown {
+  display: block;
+  position: absolute;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  z-index: 1000;
+  width: 1000px;
+  top: 72px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 25px;
+  line-height : 50px;
+  font-size: 20px !important;
+  font-weight: bold !important;
+
+}
+@media (max-width: 768px) {
+  .services-dropdown {
+    position: static;
+    width: 100% !important;
+  }
+
+  .services-grid {
+    flex-direction: column;
+  }
+
+  .services-column {
+    min-width: 100% !important;
+  }
+
+  .text-white1 {
+    --bs-text-opacity: 1;
+    color: rgb(0 0 0) !important;
+}
+}
+.text-white1 {
+  --bs-text-opacity: 1;
+  color: rgb(255, 255, 255) !important;
+}
+
+.nav-item:hover .services-dropdown {
+  display: block;
+}
+
+.services-grid {
+  display: flex;
+  justify-content: space-between;
+}
+
+.services-column {
+  flex: 1 1;
+  max-height: 400px;
+  overflow: hidden;
+}
+
+.service-box-column {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  max-height: 400px; /* Set a fixed height */
+  overflow-y: auto; /* Add scrollbar if content exceeds height */
+}
+
+.service-box {
+  flex: 1 0 45%; /* Adjust the width of the service boxes */
+  padding: 20px;
+  border: 1px solid #ddd;
+  text-align: center;
+  background-color: #f8f9fa;
+  transition: background-color 0.3s;
+}
+.dropdown-item.active {
+  font-weight: bold;
+  background-color: #fba504 !important;
+  padding: 13px 0px 12px 10px;
+  width: 330px;
+  text-align: center;
+  border-radius: 10px;
+  color: white !important;
+  position: relative;
+  padding: 15px 0;
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--light) !important;
+  outline: none;
+  transition: 1.1s;
+}
+.service-box-column {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.service-box {
+  flex: 1 0 45%; /* Adjust the width of the service boxes */
+  padding: 20px;
+  border: 1px solid #ddd;
+  text-align: center;
+  background-color: #f8f9fa;
+  transition: background-color 0.3s;
+}
+
+.service-box:hover {
+  background-color: #e9ecef;
+}
+
+.dropdown-item {
+  padding: 10px 0 !important
+}
+
+.progress-container-new {
+  width: 100%;
+  height: 4px;
+  background: #f3f3f3;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+
+.progress-bar-new {
+  height: 4px;
+  background: #007bff;
+  width: 0%;
 }
 
 .navbar-light .navbar-nav .nav-link {
@@ -291,6 +419,67 @@ h6,
 
 .sticky-top.navbar-light .navbar-brand-logo img {
     max-height: 85px;
+}
+
+/* ContactModal.css */
+.container.contact {
+  padding: 20px;
+}
+
+.contact-info {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.contact-info img {
+  width: 300px;
+  height: 225px;
+  margin-bottom: 20px;
+}
+
+.contact-info h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.contact-info h4 {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.contact-form .form-group {
+  margin-bottom: 15px;
+}
+
+.contact-form .form-control {
+  border-radius: 5px;
+}
+
+.contact-form .btn {
+  background-color: #f0a500;
+  border-color: #f0a500;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.contact-form .btn:hover {
+  background-color: #d18f00;
+  border-color: #d18f00;
+}
+.modal {
+  --bs-modal-zindex: 1055;
+  --bs-modal-width: 870px !important;
+}
+.modal-header{
+  padding: 0 !important;
+  border-bottom: 0 !important;
+}
+
+.btn-close{
+  padding: 3px !important;
+    background-color: #ff8700 !important;
+  font-size: 16px !important;
 }
 
 @media (max-width: 991.98px) {
