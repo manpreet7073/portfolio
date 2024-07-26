@@ -1,13 +1,28 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import Image from 'next/image';
+import emailjs from '@emailjs/browser';
+import { BiLoaderCircle } from 'react-icons/bi';
 
 const ContactModal = ({ show, handleClose }) => {
   const [formData, setFormData] = useState({
-    fname: '',
-    lname: '',
+    name: '',
     email: '',
-    comment: '',
+    subject: '',
+    message: '',
   });
+  const [loading, setLoading] = useState(false);
+  const [successMessage, setSuccessMessage] = useState('');
+
+  // Clear success message after 5 seconds
+  useEffect(() => {
+    if (successMessage) {
+      const timer = setTimeout(() => {
+        setSuccessMessage('');
+      }, 5000); // 5000ms = 5 seconds
+
+      return () => clearTimeout(timer);
+    }
+  }, [successMessage]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -16,9 +31,27 @@ const ContactModal = ({ show, handleClose }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission logic
-    console.log(formData);
-    handleClose(); // Close the modal after submission
+    setLoading(true);
+    setSuccessMessage('');
+
+    emailjs.send(
+      'service_wqzvvnl',
+      'template_bvynfqg',
+      {
+        name: formData.name,
+        email: formData.email,
+        subject: formData.subject,
+        message: formData.message,
+      },
+      'tb1ZmJ7PCnRghiZiO'
+    ).then((result) => {
+      setLoading(false);
+      setSuccessMessage('Your message has been sent successfully!');
+      setFormData({ name: '', email: '', subject: '', message: '' });
+    }, (error) => {
+      setLoading(false);
+      setSuccessMessage('An error occurred, please try again.');
+    });
   };
 
   return (
@@ -58,19 +91,6 @@ const ContactModal = ({ show, handleClose }) => {
                             />
                           </div>
                           <div className="mb-3">
-                            <label htmlFor="lname" className="form-label">Last Name:</label>
-                            <input
-                              type="text"
-                              className="form-control"
-                              id="lname"
-                              placeholder="Enter Last Name"
-                              name="lname"
-                              value={formData.lname}
-                              onChange={handleChange}
-                              required
-                            />
-                          </div>
-                          <div className="mb-3">
                             <label htmlFor="email" className="form-label">Email:</label>
                             <input
                               type="email"
@@ -84,21 +104,37 @@ const ContactModal = ({ show, handleClose }) => {
                             />
                           </div>
                           <div className="mb-3">
-                            <label htmlFor="comment" className="form-label">Comment:</label>
+                            <label htmlFor="lname" className="form-label">Subject:</label>
+                            <input
+                              type="text"
+                              className="form-control"
+                              id="lname"
+                              placeholder="Enter Last Name"
+                              name="subject"
+                              value={formData.subject || ''} // Ensure value is always a string
+                              onChange={handleChange}
+                              required
+                            />
+                          </div>
+                          <div className="mb-3">
+                            <label htmlFor="comment" className="form-label">Message:</label>
                             <textarea
                               className="form-control"
                               id="comment"
                               rows="5"
-                              name="comment"
-                              value={formData.comment}
+                              name="message"
+                              value={formData.message}
                               onChange={handleChange}
                               required
                             ></textarea>
                           </div>
                           <div className="mb-3">
-                            <button type="submit" className="btn btn-primary">Submit</button>
+                            <button type="submit" className="btn btn-primary" disabled={loading}>
+                              {loading ? <BiLoaderCircle className="spinner" /> : 'Submit'}
+                            </button>
                           </div>
                         </form>
+                        {successMessage && <div className="alert alert-success mt-3">{successMessage}</div>}
                       </div>
                     </div>
                   </div>

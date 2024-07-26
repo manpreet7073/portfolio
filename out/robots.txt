@@ -1,10 +1,9 @@
+# *
 User-agent: *
-Disallow: /private
-Disallow: /admin
-Disallow: /wp-admin
-Disallow: /cgi-bin
-Disallow: /wp-includes
-Disallow: /wp-content/plugins
-Disallow: /wp-content/themes
+Allow: /
 
+# Host
+Host: https://rayonweb.com
+
+# Sitemaps
 Sitemap: https://rayonweb.com/sitemap.xml
