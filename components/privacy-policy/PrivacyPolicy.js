@@ -1,7 +1,4 @@
 import React from 'react'
-import { MdWorkHistory,MdLibraryBooks  } from "react-icons/md";
-import { FaUsersGear } from "react-icons/fa6";
-import { RiUserStarFill } from "react-icons/ri";
 
 
 const PrivacyPolicy = () => {
@@ -76,20 +73,8 @@ const PrivacyPolicy = () => {
   <hr />
   <h2 id="contact-information" className='main-cl'>Contact Information</h2>
   <p className='hadding-p'>
-    <strong>Address:</strong>
-    <br />
-    123 Example St
-    <br />
-    City, State 12345
-    <br />
-    Country
-  </p>
-  <p className='hadding-p'>
     <strong>Email:</strong>{" "}
-    <a href="mailto:support@rayonweb.com">support@rayonweb.com</a>
-  </p>
-  <p className='hadding-p'>
-    <strong>Phone:</strong> +1-234-567-8901
+    <a href="mailto:info@rayonweb.com">support@rayonweb.com</a>
   </p>
   <hr />
   <h2 id="types-of-data-collected" className='main-cl'>Types of Data Collected</h2>

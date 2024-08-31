@@ -9,7 +9,7 @@ import dynamic from 'next/dynamic';
 const DynamicHeader = dynamic(() => import('./core/Header'), {
   loading: () => (
     <div className="loader text-center">
-      <Image src="/loding.png" width={50} height={50} alt="Loader" className="loader-image" />
+      <Image src="/loading.png" width={50} height={50} alt="Loader" className="loader-image" />
     </div>
   ),
 });
@@ -17,7 +17,7 @@ const DynamicHeader = dynamic(() => import('./core/Header'), {
 const DynamicFooter = dynamic(() => import('./core/Footer'), {
   loading: () => (
     <div className="loader text-center">
-      <Image src="/loding.png" width={50} height={50} alt="Loader" className="loader-image" />
+      <Image src="/loading.png" width={50} height={50} alt="Loader" className="loader-image" />
     </div>
   ),
 });

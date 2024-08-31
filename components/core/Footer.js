@@ -11,8 +11,7 @@ const Footer = () => {
       <div className="row g-5">
         <div className="col-md-6 col-lg-3">
           <p className="section-title text-white h5 mb-4">Address<span /></p>
-          <p><i className="fa fa-map-marker-alt me-3" />123 Street, New York, USA</p>
-          <p><i className="fa fa-phone-alt me-3" />+012 345 67890</p>
+          <p><i className="fa fa-map-marker-alt me-3" />sector 71 Mohali India</p>
           <p><i className="fa fa-envelope me-3" />info@rayonweb.com</p>
           <div className="d-flex pt-2">
             <a className="btn btn-outline-light btn-social"  href=""><FaTwitter size={20} /></a>

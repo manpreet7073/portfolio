@@ -25,33 +25,47 @@ const Header = () => {
   const servicesData = {
     'web-development': { 
       items: [
-        {name: 'Python Development', icon: <FaPython  size={70} />},
-        {name: 'PHP Development', icon: <FaPhp  size={70} />},
+        {name: 'Python Development', icon: <FaPython size={70} />, href: '/services/python'},
+        {name: 'PHP Development', icon: <FaPhp size={70} />},
         {name: 'React Js Development', icon: <FaReact size={70}  />}, 
-        {name: 'Vue Js Development', icon: <FaVuejs  size={70} />},
+        {name: 'Vue Js Development', icon: <FaVuejs size={70} />},
         {name: 'Node Js Development', icon: <FaNodeJs size={70}  />}, 
-        {name: 'Angular Development', icon: <FaAngular  size={70} />}], icon: <CgWebsite /> },
+        {name: 'Angular Development', icon: <FaAngular size={70} />}
+      ], 
+      icon: <CgWebsite /> 
+    },
     'devops-services': { 
       items: [
         {name: 'DevOps Pipeline', icon: <SiJfrogpipelines size={70} />},
         {name: 'CI/CD Integration', icon: <GrIntegration size={70} />}, 
-        {name: 'Cloud Automation', icon: <FaMixcloud size={70} />}], icon: <FaCogs /> },
+        {name: 'Cloud Automation', icon: <FaMixcloud size={70} />}
+      ], 
+      icon: <FaCogs /> 
+    },
     'aws-cloud-services': { 
       items: [
         {name:'AWS EC2', icon: <SiAmazonec2 size={70} />},
         {name :'AWS S3', icon: <SiAmazons3 size={70} />},
-        { name: 'AWS Lambda', icon: <SiAwslambda size={70} />}], icon: <FaCloud /> },
+        { name: 'AWS Lambda', icon: <SiAwslambda size={70} />}
+      ], 
+      icon: <FaCloud /> 
+    },
     'data-engineering-services': { 
       items: [
         {name:'Data Integration', icon: <BsDatabaseFillAdd size={70} />},
         {name: 'Data Visualization', icon: <TbDatabaseSearch size={70} />},
-        {name: 'Data Migration', icon: <TbDatabaseShare size={70} />} ], icon: <FaDatabase /> },
+        {name: 'Data Migration', icon: <TbDatabaseShare size={70} />}
+      ], 
+      icon: <FaDatabase /> 
+    },
     'web-designing': { 
       items: [
         {name: 'UI/UX Design', icon: <SiAntdesign size={70} />},
         {name:'Responsive Design', icon: <DiResponsive size={70} />},
         {name:'Wireframing', icon: <SiWireshark size={70} />}
-      ], icon: <FaPalette /> },
+      ], 
+      icon: <FaPalette /> 
+    },
     'digital-marketing': {
       items: [
         { name: 'SEO', icon: <FaSearch size={70} /> },
@@ -59,7 +73,9 @@ const Header = () => {
         { name: 'Social Media Marketing', icon: <FaShareSquare size={70} /> }
       ],
       icon: <FaChartLine />
-    },};
+    },
+  };
+  
 
   return (
     <>
@@ -122,12 +138,13 @@ const Header = () => {
                     </div>
                     <div className="services-column service-box-column">
                       {hoveredService && servicesData[hoveredService]?.items.map((service, index) => (
-                        <div key={index} className="service-box">
+                        <Link key={index} href={service.href || '#'} className="service-box nav-link">
                           {service.icon && <span className="me-2">{service.icon}</span>} <br />
                           {service.name || service}
-                        </div>
+                        </Link>
                       ))}
                     </div>
+
                   </div>
                 </div>
                 )}

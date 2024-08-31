@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaSearch, FaLaptopCode, FaArrowRight, FaPhp,FaVuejs,FaShoppingCart, FaNodeJs, FaAngular} from "react-icons/fa";
+import { FaSearch, FaLaptopCode,FaShieldAlt, FaArrowRight, FaPhp,FaVuejs,FaShoppingCart, FaNodeJs, FaAngular} from "react-icons/fa";
 import { GrCloudComputer } from "react-icons/gr";
 import { SiPayloadcms } from "react-icons/si";
 import { RiReactjsLine,RiNextjsFill } from "react-icons/ri";
@@ -137,7 +137,18 @@ const ServiceSection = ({ PageName }) => {
                   <Link className="btn btn-square" href="/service"><FaArrowRight size={15} /></Link>
                 </div>
               </div>
-              
+
+
+              <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+              <div className="service-item d-flex flex-column text-center rounded">
+                <div className="service-icon flex-shrink-0">
+                  <FaShieldAlt size={50} />
+                </div>
+                <h5 className="mb-3 main-cl">Cyber Security Services</h5>
+                <p className="m-0">Protect your business with our advanced cyber security services, ensuring the safety and integrity of your data and systems.</p>
+                <Link className="btn btn-square" href="/contact"><FaArrowRight size={15} /></Link>
+              </div>
+              </div>
             </>
           )}
 
